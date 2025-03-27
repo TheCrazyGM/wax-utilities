@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/examples"]
+
+[project]
+name = "wax-tests"
+version = "0.1.0"
+description = "A simple way to run wax examples."
+authors = [{name = "Jakub Ziębiński", email = "ziebinskijakub@gmail.com"}]
+authors = [{name = "Michael Garcia", email = "thecrazygm@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "protobuf",
+    "wax==0.3.10.dev602+ae2e51c",
+    "beekeepy",
+    "schemas",
+]
+
+[tool.uv.sources]
+wax = { index = "gitlab-wax" }
+beekeepy = { index = "gitlab-beekeepy" }
+shemas = { index = "gitlab-schemas" }
+
+[[tool.uv.index]]
+name = "gitlab-wax"
+url="https://gitlab.syncad.com/api/v4/projects/419/packages/pypi/simple/"
+
+[[tool.uv.index]]
+name = "gitlab-beekeepy"
+url="https://gitlab.syncad.com/api/v4/projects/434/packages/pypi/simple/"
+
+[[tool.uv.index]]
+name = "gitlab-schemas"
+url="https://gitlab.syncad.com/api/v4/projects/362/packages/pypi/simple/"
