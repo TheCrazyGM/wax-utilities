@@ -25,6 +25,13 @@ uv sync
 uv sync --prerelease=allow --index-strategy=unsafe-best-match
 ```
 
+## Load the venv and environment
+
+```bash
+source .venv/bin/activate
+source .env
+```
+
 ## Move to the examples directory
 
 ```bash
@@ -32,6 +39,14 @@ cd src/examples
 ```
 
 ## Set the environment variables
+
+```bash
+cp env.example .env
+$EDITOR .env
+source .env
+```
+
+## Environment variables description
 
 ```markdown
 Optional: PASSWORD, WALLET_NAME, and HIVED_ADDRESS - default values are used if not set
