@@ -29,7 +29,6 @@ uv sync --prerelease=allow --index-strategy=unsafe-best-match
 
 ```bash
 source .venv/bin/activate
-source .env
 ```
 
 ## Move to the examples directory
