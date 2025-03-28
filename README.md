@@ -20,6 +20,8 @@ pipx install uv
 ## Install the dependencies
 
 ```bash
+uv sync
+# if the dependencies are not found try
 uv sync --prerelease=allow --index-strategy=unsafe-best-match
 ```
 
@@ -32,7 +34,7 @@ cd src/examples
 ## Set the environment variables
 
 ```markdown
-PASSWORD, WALLET_NAME, and HIVED_URL are optional - default values are used if not set
+Optional: PASSWORD, WALLET_NAME, and HIVED_ADDRESS - default values are used if not set
 All variables: PASSWORD, WALLET_NAME, ACCOUNT_NAME, TRANSFER_RECEIVER, PRIVATE_KEY, PUBLIC_KEY, HIVED_ADDRESS
 ```
 

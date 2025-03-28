@@ -14,8 +14,8 @@ requires-python = ">=3.12"
 dependencies = [
     "protobuf",
     "wax==0.3.10.dev602+ae2e51c",
-    "beekeepy",
-    "schemas",
+    "beekeepy==0.0.1.dev352+ef6b8c6",
+    "schemas==0.0.1.dev331+7181389",
 ]
 
 [tool.uv.sources]
